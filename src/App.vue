@@ -2,10 +2,19 @@
 <div id="app">
   <md-layout md-gutter class="wrapper">
     <md-dialog ref="gameResult">
-      <md-dialog-title>Results</md-dialog-title>
-
-      <md-dialog-content v-if="this.score.computer > this.score.user">You are loose =(</md-dialog-content>
-      <md-dialog-content v-if="this.score.computer < this.score.user">You are win!!!</md-dialog-content>
+      <md-dialog-content v-if="this.score.computer > this.score.user">
+      <p>
+        <img src="./assets/lose.svg">
+        You are loose =(
+      </p>
+      </md-dialog-content>
+      <md-dialog-content v-if="this.score.computer < this.score.user">
+        <p>
+          <img src="./assets/win.svg">
+          You are win!!!<br/>
+          Level up!
+        </p>
+      </md-dialog-content>
       <md-dialog-content v-if="this.score.computer === this.score.user">Dead heat =(</md-dialog-content>
 
       <md-dialog-actions>
@@ -18,7 +27,7 @@
           border_bottom
           <md-tooltip>Number by x</md-tooltip>
         </md-icon>
-        <md-input type="number" v-model="gameOptions.mx" max="20" min="4"></md-input>
+        <md-input :disabled="gameStatus.play"type="number" v-model.number="gameOptions.mx" max="20" min="4"></md-input>
       </md-input-container>
     </md-layout>
     <md-layout md-flex="22" md-flex-small="50">
@@ -27,7 +36,7 @@
           border_left
           <md-tooltip>Number by y</md-tooltip>
         </md-icon>
-        <md-input type="number" v-model="gameOptions.my" max="20" min="4"></md-input>
+        <md-input :disabled="gameStatus.play"type="number" v-model.number="gameOptions.my" max="20" min="4"></md-input>
       </md-input-container>
     </md-layout>
     <md-layout md-flex="22" md-flex-small="50">
@@ -36,7 +45,7 @@
           timer
           <md-tooltip>Timer in ms</md-tooltip>
         </md-icon>
-        <md-input type="number" v-model="gameOptions.timeout" max="20000" min="500"></md-input>
+        <md-input :disabled="gameStatus.play"type="number" v-model.number="gameOptions.timeout" max="20000" min="500"></md-input>
       </md-input-container>
     </md-layout>
     <md-layout md-flex="22" md-flex-small="50">
@@ -45,9 +54,10 @@
           score
           <md-tooltip>Max score</md-tooltip>
         </md-icon>
-        <md-input type="number" v-model="gameOptions.maxScore" max="20000" min="10"></md-input>
+        <md-input :disabled="gameStatus.play"type="number" v-model.number="gameOptions.maxScore" max="20000" min="5"></md-input>
       </md-input-container>
     </md-layout>
+
     <md-layout md-flex="10" md-flex-small="100">
       <md-button :class="{'md-fab start-stop': true, 'md-primary': !gameStatus.play,'md-accent': gameStatus.play}" @click="gameStatus.play ? stop() : start()">
         <md-icon>{{gameStatus.play ? 'stop' : 'play_arrow'}}</md-icon>
@@ -109,13 +119,14 @@ export default {
     }
   },
   watch: {
-    'score.user': function(o){
+    'score.user': function(o) {
       if (this.score.user === this.gameOptions.maxScore) {
         clearInterval(this.interval)
         this.$refs['gameResult'].open();
+        this.hardUp()
       }
     },
-    'score.computer': function(o){
+    'score.computer': function(o) {
       if (this.score.computer === this.gameOptions.maxScore) {
         clearInterval(this.interval)
         this.$refs['gameResult'].open();
@@ -123,6 +134,14 @@ export default {
     }
   },
   methods: {
+    hardUp() {
+      this.gameOptions = {
+        maxScore: this.gameOptions.maxScore + 1,
+        mx: Math.min(this.gameOptions.mx + 1, 20),
+        my: Math.min(this.gameOptions.my + 1, 20),
+        timeout: Math.max(this.gameOptions.timeout - 500, 1500),
+      }
+    },
     getRandomArbitrary(max, min = 0) {
       return 0 | (Math.random() * (max - min) + min)
     },

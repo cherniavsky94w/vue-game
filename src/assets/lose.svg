@@ -1,0 +1,38 @@
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="transform-origin: 50px 50px 0px;" xml:space="preserve"><g style="transform-origin: 50px 50px 0px;"><g style="transform-origin: 50px 50px 0px; transform: scale(0.6);"><g style="transform-origin: 50px 50px 0px;"><g><style type="text/css" class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -1s; animation-direction: normal;">.st0{fill:none;stroke:#333333;stroke-width:8;stroke-miterlimit:10;} .st1{fill:#333333;} .st2{fill-rule:evenodd;clip-rule:evenodd;fill:#B3B3B3;} .st3{fill:#FFFFFF;} .st4{fill:#B3B3B3;} .st5{fill:#77A4BD;} .st6{fill:#A0C8D7;} .st7{fill:#ABBD81;} .st8{fill:#E15B64;} .st9{fill:#666666;} .st10{fill:none;stroke:#F47E60;stroke-width:8;stroke-linecap:round;stroke-miterlimit:10;} .st11{fill:none;stroke:#F47E60;stroke-width:9.0001;stroke-linecap:round;stroke-miterlimit:10;} .st12{fill:none;stroke:#F47E60;stroke-width:9;stroke-linecap:round;stroke-miterlimit:10;}</style><g class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.916667s; animation-direction: normal;"><path class="st1" d="M45.5,8.2l-29.4,17c-2.8,1.6-4.5,4.6-4.5,7.8v34c0,3.2,1.7,6.2,4.5,7.8l29.4,17c2.8,1.6,6.2,1.6,9,0l29.4-17 c2.8-1.6,4.5-4.6,4.5-7.8V33c0-3.2-1.7-6.2-4.5-7.8l-29.4-17C51.7,6.6,48.3,6.6,45.5,8.2z" fill="rgb(51, 51, 51)" stroke="rgb(51, 51, 51)" style="fill: rgb(51, 51, 51); stroke: rgb(51, 51, 51);"></path></g><g class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.833333s; animation-direction: normal;"><path class="st8" d="M62.4,31.3L50,43.7L37.6,31.3c-1.7-1.7-4.6-1.7-6.3,0c-1.7,1.7-1.7,4.6,0,6.3L43.7,50L31.3,62.4 c-1.7,1.7-1.7,4.6,0,6.3c1.7,1.7,4.6,1.7,6.3,0L50,56.3l12.4,12.4c1.7,1.7,4.6,1.7,6.3,0c1.7-1.7,1.7-4.6,0-6.3L56.3,50l12.4-12.4 c1.7-1.7,1.7-4.6,0-6.3C66.9,29.6,64.1,29.6,62.4,31.3z" stroke="rgb(51, 51, 51)" fill="rgb(225, 91, 100)" style="stroke: rgb(51, 51, 51); fill: rgb(225, 91, 100);"></path></g><metadata xmlns:d="https://loading.io/stock/" class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.75s; animation-direction: normal;">
+<d:name class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.666667s; animation-direction: normal;">close</d:name>
+<d:tags class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.583333s; animation-direction: normal;">close,reject,off,disable,remove,delete,cancel,drop,collapse,hexagon,form</d:tags>
+<d:license class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.5s; animation-direction: normal;">cc-by</d:license>
+<d:slug class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.416667s; animation-direction: normal;">xkn5dx</d:slug>
+</metadata></g></g></g></g><style type="text/css" class="ld ld-breath" style="transform-origin: 50px 50px 0px; animation-duration: 1s; animation-delay: -0.333333s; animation-direction: normal;">path,ellipse,circle,rect,polygon,polyline,line { stroke-width: 0; }@keyframes ld-breath {
+  0% {
+    -webkit-transform: scale(0.86);
+    transform: scale(0.86);
+  }
+  50% {
+    -webkit-transform: scale(1.06);
+    transform: scale(1.06);
+  }
+  100% {
+    -webkit-transform: scale(0.86);
+    transform: scale(0.86);
+  }
+}
+@-webkit-keyframes ld-breath {
+  0% {
+    -webkit-transform: scale(0.86);
+    transform: scale(0.86);
+  }
+  50% {
+    -webkit-transform: scale(1.06);
+    transform: scale(1.06);
+  }
+  100% {
+    -webkit-transform: scale(0.86);
+    transform: scale(0.86);
+  }
+}
+.ld.ld-breath {
+  -webkit-animation: ld-breath 1s infinite;
+  animation: ld-breath 1s infinite;
+}
+</style></svg>
