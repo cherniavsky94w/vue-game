@@ -1,6 +1,18 @@
 <template>
 <div id="app">
   <md-layout md-gutter class="wrapper">
+    <md-dialog ref="helpModal">
+      <md-dialog-content>
+      <p>
+        Click <md-icon>play_arrow</md-icon> button and you need catch yellow square =)<br>
+        It is all!
+      </p>
+      </md-dialog-content>
+
+      <md-dialog-actions>
+        <md-button class="md-primary" @click="$refs['helpModal'].close()">Cancel</md-button>
+      </md-dialog-actions>
+    </md-dialog>
     <md-dialog ref="gameResult">
       <md-dialog-content v-if="this.score.computer > this.score.user">
       <p>
@@ -68,6 +80,9 @@
     <span class="md-headline">You {{score.user}} - {{score.computer}} Computer</span>
     <md-layout v-for="(v,y) in xArray" :key="y" md-align="center">
       <Button v-for="(v,x) in yArray" :key="x" :xpos="x" :ypos="y" :size="buttonSize" :xcurrent="gameStatus.current.x" :ycurrent="gameStatus.current.y" v-on:update-score="updateScore" />
+    </md-layout>
+    <md-layout md-flex="100" md-align="center">
+    <md-button @click="$refs['helpModal'].open()">How to play?</md-button>
     </md-layout>
   </div>
 </div>

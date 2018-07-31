@@ -1,5 +1,5 @@
 <template>
-<md-button @click="catchClick" :class="{'square md-fab': true, 'active-color': active, 'default-color': !active}" :style="{'width': sizePx,'min-width': sizePx,'height': sizePx,'min-height': sizePx}"></md-button>
+<md-button @click="catchClick" :class="{'square': true, 'active-color': active, 'default-color': !active, 'success-color': catched}" :style="{'width': sizePx,'min-width': sizePx,'height': sizePx,'min-height': sizePx}"></md-button>
 </template>
 
 <script>
@@ -33,14 +33,15 @@ export default {
   },
   data() {
     return {
-      active: false
+      active: false,
+      catched: false
     }
   },
   watch: {
-    xcurrent: function (o) {
+    xcurrent: function(o) {
       this.compare()
     },
-    ycurrent: function (o) {
+    ycurrent: function(o) {
       this.compare()
     },
   },
@@ -50,8 +51,14 @@ export default {
       else this.active = false
     },
     catchClick() {
-      this.$emit('update-score',this.active)
-      return this.active = false
+      this.$emit('update-score', this.active)
+      if (this.active) {
+        this.catched = true
+        setTimeout(() => {
+          this.catched = false
+        }, 2000);
+      }
+      this.active = false
     }
   }
 }
@@ -60,7 +67,7 @@ export default {
 <style lang="css" scoped>
 
 .default-color {
-  background-color: #2196f3 !important;
+  background-color: #448aff !important;
 }
 
 .active-color {
